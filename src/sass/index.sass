@@ -1,0 +1,91 @@
+@import 'normalize'
+@import 'reset'
+
+html,
+body
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  font-size: 16px
+  line-height: 1.2
+  overflow-x: hidden
+
+.wrapper
+  width: 100vw
+  min-height: 100vh
+  display: flex
+  justify-content: center
+  align-items: center
+  background: rgb(238,174,202)
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%)
+
+.app
+  display: flex
+  align-items: center
+  width: 800px
+  height: 450px
+  color: #47247e
+  background-color: #f1e2ff
+  border-radius: 10px
+
+.main
+  flex-basis: 65%
+  padding: 20px
+
+.sidebar
+  position: relative
+  display: flex
+  align-items: center
+  color: #fff
+  flex-basis: 35%
+  height: 100%
+  background: url('https://images.theconversation.com/files/232705/original/file-20180820-30593-1nxanpj.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=496&fit=clip') center / cover no-repeat
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 1
+    width: 100%
+    height: 100%
+    background-color: rgba(#000, .25)
+
+.info
+  position: relative
+  z-index: 2
+  text-align: center
+  margin-bottom: 20px
+  h2
+    font-size: 36px
+    line-height: 1
+    margin-bottom: 10px
+
+.form
+  display: flex
+  justify-content: center
+  align-items: center
+  margin-bottom: 20px
+  input,
+  button
+    height: 30px
+    padding: 5px
+    border: 0
+    border-radius: 5px
+  input
+    color: inherit
+    background-color: #fff
+    margin-right: 10px
+    &:focus
+      box-shadow: 0 3px 15px rgba(#eeaeca,.75)
+  button
+    color: #fff
+    background-color: #eeaeca
+    &:hover,
+    &:focus
+      background-color: #f097c3
+    &:active
+      background-color: #ed7fb6
+
+.weather
+  text-align: center
+  li
+    &:not(:last-child)
+      margin-bottom: 2px
